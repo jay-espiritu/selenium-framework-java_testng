@@ -16,7 +16,7 @@ public class LoginTests extends BaseTests {
     SecureAreaPage secureAreaPage = loginPage.clickLoginButton();
     secureAreaPage.getAlertText();
     Assert.assertTrue(
-            secureAreaPage.getAlertText().contains("You logged into a secure area!"),
-            "Alert text does not match");
+        secureAreaPage.getAlertText().contains("You logged into a secure area!"),
+        "Alert text does not match");
   }
 }

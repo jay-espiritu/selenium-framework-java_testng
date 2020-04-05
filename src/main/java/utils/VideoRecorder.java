@@ -46,11 +46,10 @@ public class VideoRecorder extends ScreenRecorder {
     } else if (!movieFolder.isDirectory()) {
       throw new IOException("\"" + movieFolder + "\" is not a directory.");
     }
-    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH.mm.ss");
+    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     return new File(
         movieFolder,
         name
-            + "-"
             + dateFormat.format(new Date())
             + "."
             + Registry.getInstance().getExtension(fileFormat));
@@ -99,19 +98,12 @@ public class VideoRecorder extends ScreenRecorder {
                 Rational.valueOf(30)),
             null,
             file,
-            getDate());
+            "");
 
     screenRecorder.start();
   }
 
   public static void stopRecording() throws Exception {
     screenRecorder.stop();
-  }
-
-  private static String getDate() {
-    SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMyyyyhhmmss");
-    String date = dateFormat.format(new Date());
-
-    return date;
   }
 }
