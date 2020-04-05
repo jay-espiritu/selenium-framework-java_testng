@@ -10,12 +10,12 @@ public class SecureAreaPage {
     private BasePage basePage;
     private By statusAlert = By.id("flash");
 
-    public SecureAreaPage(WebDriver driver){
+    public SecureAreaPage(WebDriver driver) {
         this.driver = driver;
         basePage = new BasePage(driver);
     }
 
-    public String getAlertText(){
+    public String getAlertText() {
         return basePage.getElementText(statusAlert);
     }
 }

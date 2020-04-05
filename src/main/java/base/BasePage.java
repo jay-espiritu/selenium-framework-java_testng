@@ -7,33 +7,31 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class BasePage {
-    public WebDriver driver;
+  public WebDriver driver;
 
-    public BasePage(WebDriver driver) {
-        this.driver = driver;
-    }
+  public BasePage(WebDriver driver) {
+    this.driver = driver;
+  }
 
-    public WebElement find(By locator) {
-        WebElement element = null;
-        try
-        {
-            element = driver.findElement(locator);
-        } catch (NoSuchElementException e)
-        {
-            Assert.fail("Element cannot be found.");
-        }
-        return element;
+  public WebElement find(By locator) {
+    WebElement element = null;
+    try {
+      element = driver.findElement(locator);
+    } catch (NoSuchElementException e) {
+      Assert.fail("Element cannot be found.");
     }
+    return element;
+  }
 
-    public void clicked(By locator) {
-        find(locator).click();
-    }
+  public void clicked(By locator) {
+    find(locator).click();
+  }
 
-    public void enterText(String inputText, By locator) {
-        find(locator).sendKeys(inputText);
-    }
+  public void enterText(String inputText, By locator) {
+    find(locator).sendKeys(inputText);
+  }
 
-    public String getElementText(By locator){
-        return find(locator).getText();
-    }
+  public String getElementText(By locator) {
+    return find(locator).getText();
+  }
 }

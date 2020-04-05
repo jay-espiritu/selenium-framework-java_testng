@@ -11,22 +11,22 @@ public class LoginPage {
 
     private By usernameField = By.id("username");
     private By passwordField = By.id("password");
-    private By loginButton     = By.cssSelector("button");
+    private By loginButton = By.cssSelector("button");
 
-    public LoginPage(WebDriver driver){
+    public LoginPage(WebDriver driver) {
         this.driver = driver;
         basePage = new BasePage(driver);
     }
 
-    public void setUsername(String username){
+    public void setUsername(String username) {
         basePage.enterText(username, usernameField);
     }
 
-    public void setPassword(String password){
+    public void setPassword(String password) {
         basePage.enterText(password, passwordField);
     }
 
-    public SecureAreaPage clickLoginButton(){
+    public SecureAreaPage clickLoginButton() {
         basePage.clicked(loginButton);
         return new SecureAreaPage(driver);
     }

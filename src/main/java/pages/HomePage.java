@@ -11,12 +11,12 @@ public class HomePage {
 
     private By formAuthenticationLink = By.linkText("Form Authentication");
 
-    public HomePage(WebDriver driver){
+    public HomePage(WebDriver driver) {
         this.driver = driver;
         basePage = new BasePage(driver);
     }
 
-    public LoginPage clickFormAuthentication(){
+    public LoginPage clickFormAuthentication() {
         basePage.clicked(formAuthenticationLink);
         return new LoginPage(driver);
     }
