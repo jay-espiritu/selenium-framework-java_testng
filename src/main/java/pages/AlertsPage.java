@@ -47,7 +47,7 @@ public class AlertsPage {
   }
 
   public String alert_getText() {
-    var alertText = driver.switchTo().alert().getText();
+    String alertText = driver.switchTo().alert().getText();
     Reporter.LogDebug("Alert text: '" + alertText + "'");
     return alertText;
   }
@@ -58,7 +58,7 @@ public class AlertsPage {
   }
 
   public String getResult() {
-    var text = basePage.getElementText(results);
+    String text = basePage.getElementText(results);
     Reporter.LogDebug("Alert text: '" + text + "'");
     return text;
   }
