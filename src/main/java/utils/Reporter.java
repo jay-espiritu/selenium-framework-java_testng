@@ -1,7 +1,23 @@
 package utils;
 
+import org.apache.log4j.Logger;
+
 public class Reporter {
-  public static void Log(String message) {
-    System.out.println(message);
+  private static Logger log = Logger.getLogger("selenium");
+
+  public static void LogInfo(String message) {
+    log.info(message);
+  }
+
+  public static void LogDebug(String message) {
+    log.debug(message);
+  }
+
+  public static void LogError(String message) {
+    log.error(message);
+  }
+
+  public static void LogFatal(String message) {
+    log.fatal(message);
   }
 }

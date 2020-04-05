@@ -1,7 +1,7 @@
 package base;
 
 import com.google.common.io.Files;
-import org.monte.screenrecorder.ScreenRecorder;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +21,7 @@ public class BaseTests {
 
   protected HomePage homePage;
   private EventFiringWebDriver driver;
-  private ScreenRecorder screenRecorder;
+  Logger log = Logger.getLogger("dev");
 
   @BeforeMethod
   public void setUp() throws Exception {
@@ -46,7 +46,7 @@ public class BaseTests {
     options.addArguments("disable-infobars");
     options.addArguments("start-maximized");
     options.addArguments("disable-extensions");
-    options.setHeadless(false);
+    options.setHeadless(true);
     return options;
   }
 

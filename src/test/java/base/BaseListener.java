@@ -3,17 +3,17 @@ package base;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
-import static utils.Reporter.Log;
+import utils.Reporter;
 
 public class BaseListener extends BaseTests implements ITestListener {
+
   private static String getTestMethodName(ITestResult iTestResult) {
     return iTestResult.getMethod().getConstructorOrMethod().getName();
   }
 
   @Override
   public void onTestStart(ITestResult iTestResult) {
-    Log("Starting test method: " + getTestMethodName(iTestResult));
+    log.info("Starting test method: " + getTestMethodName(iTestResult));
   }
 
   @Override
@@ -24,7 +24,7 @@ public class BaseListener extends BaseTests implements ITestListener {
 
   @Override
   public void onTestSkipped(ITestResult iTestResult) {
-    Log("Skipped test: " + getTestMethodName(iTestResult));
+    Reporter.LogInfo("Skipped test: " + getTestMethodName(iTestResult));
   }
 
   @Override
