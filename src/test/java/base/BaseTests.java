@@ -7,9 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import utils.EventRecorder;
@@ -22,21 +20,32 @@ public class BaseTests {
   protected HomePage homePage;
   private EventFiringWebDriver driver;
 
-  @BeforeClass
+  @BeforeMethod
   public void setUp() {
     System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
     driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
     driver.register(new EventRecorder());
-  }
 
-  @BeforeMethod
-  public void goHome() {
     driver.get("https://the-internet.herokuapp.com/");
     homePage = new HomePage(driver);
   }
 
   @AfterMethod
-  public void recordFailure(ITestResult result) {
+  public void tearDown(ITestResult result) {
+    recordFailure(result);
+    driver.quit();
+  }
+
+  private ChromeOptions getChromeOptions() {
+    ChromeOptions options = new ChromeOptions();
+    options.addArguments("disable-infobars");
+    options.addArguments("start-maximized");
+    options.addArguments("disable-extensions");
+    options.setHeadless(false);
+    return options;
+  }
+
+  private void recordFailure(ITestResult result) {
     if (ITestResult.FAILURE == result.getStatus()) {
       var camera = (TakesScreenshot) driver;
       File screenshot = camera.getScreenshotAs(OutputType.FILE);
@@ -46,17 +55,5 @@ public class BaseTests {
         e.printStackTrace();
       }
     }
-  }
-
-  @AfterClass
-  public void tearDown() {
-    driver.quit();
-  }
-
-  private ChromeOptions getChromeOptions() {
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("disable-infobars");
-    options.setHeadless(false);
-    return options;
   }
 }

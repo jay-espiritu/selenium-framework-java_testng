@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="WebDriver Java Test">
+<suite name="WebDriver Java Test" parallel="classes">
     <listeners>
         <listener class-name="base.BaseListener"/>
     </listeners>
 
     <test name="TestNG Sample Test">
         <classes>
-            <class name="login.LoginTests">
-            </class>
+            <class name="login.LoginTests" />
+            <class name="alert.AlertTests" />
         </classes>
     </test>
 
