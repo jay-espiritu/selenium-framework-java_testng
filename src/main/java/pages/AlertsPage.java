@@ -3,6 +3,7 @@ package pages;
 import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.Reporter;
 
 public class AlertsPage {
 
@@ -22,33 +23,43 @@ public class AlertsPage {
 
   public void triggerAlert() {
     basePage.clicked(triggerAlertButton);
+    Reporter.LogInfo("Clicked trigger alert button");
   }
 
   public void triggerConfirm() {
     basePage.clicked(triggerConfirmButton);
+    Reporter.LogInfo("Confirmed trigger alert");
   }
 
   public void triggerPrompt() {
     basePage.clicked(triggerPromptButton);
+    Reporter.LogInfo("Clicked trigger prompt button");
   }
 
   public void alert_clickToAccept() {
     driver.switchTo().alert().accept();
+    Reporter.LogInfo("Accepted alert pop up");
   }
 
   public void alert_clickToDismiss() {
     driver.switchTo().alert().dismiss();
+    Reporter.LogInfo("Dismissed alert pop up");
   }
 
   public String alert_getText() {
-    return driver.switchTo().alert().getText();
+    String alertText = driver.switchTo().alert().getText();
+    Reporter.LogDebug("Alert text: '" + alertText + "'");
+    return alertText;
   }
 
   public void alert_setInput(String text) {
     driver.switchTo().alert().sendKeys(text);
+    Reporter.LogInfo("Entered text in alert text field");
   }
 
   public String getResult() {
-    return basePage.getElementText(results);
+    String text = basePage.getElementText(results);
+    Reporter.LogDebug("Alert text: '" + text + "'");
+    return text;
   }
 }
