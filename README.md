@@ -3,7 +3,7 @@ Test Website: https://the-internet.herokuapp.com/
 ## Tools
 * IntelliJ IDEA CE
 * Selenium WebDriver
-* Java
+* Java (JDK 13)
 * TestNG
 * Chromedriver
 * Maven
