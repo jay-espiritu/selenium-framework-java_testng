@@ -1,6 +1,7 @@
 package base;
 
 import com.google.common.io.Files;
+import org.monte.screenrecorder.ScreenRecorder;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,6 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import utils.EventRecorder;
+import utils.VideoRecorder;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,9 +21,11 @@ public class BaseTests {
 
   protected HomePage homePage;
   private EventFiringWebDriver driver;
+  private ScreenRecorder screenRecorder;
 
   @BeforeMethod
-  public void setUp() {
+  public void setUp() throws Exception {
+    VideoRecorder.startRecording();
     System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
     driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
     driver.register(new EventRecorder());
@@ -31,9 +35,10 @@ public class BaseTests {
   }
 
   @AfterMethod
-  public void tearDown(ITestResult result) {
+  public void tearDown(ITestResult result) throws Exception {
     recordFailure(result);
     driver.quit();
+    VideoRecorder.stopRecording();
   }
 
   private ChromeOptions getChromeOptions() {
