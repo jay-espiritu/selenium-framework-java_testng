@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-public class EventRecorder implements WebDriverEventListener {
+public class EventListener implements WebDriverEventListener {
   @Override
   public void beforeAlertAccept(WebDriver webDriver) {}
 

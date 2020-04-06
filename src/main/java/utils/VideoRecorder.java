@@ -20,7 +20,7 @@ import static org.monte.media.AudioFormatKeys.MimeTypeKey;
 import static org.monte.media.VideoFormatKeys.MIME_AVI;
 import static org.monte.media.VideoFormatKeys.*;
 
-public class VideoRecorder extends ScreenRecorder {
+public class VideoRecorder extends ScreenRecorder  {
   public static ScreenRecorder screenRecorder;
   public String name;
 

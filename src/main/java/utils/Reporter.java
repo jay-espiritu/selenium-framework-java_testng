@@ -3,7 +3,7 @@ package utils;
 import org.apache.log4j.Logger;
 
 public class Reporter {
-  private static Logger log = Logger.getLogger("selenium");
+  private static Logger log = Logger.getLogger(Reporter.class.getName());
 
   public static void LogInfo(String message) {
     log.info(message);

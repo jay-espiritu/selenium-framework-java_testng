@@ -1,6 +1,8 @@
 package login;
 
 import base.BaseTests;
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -8,7 +10,9 @@ import pages.SecureAreaPage;
 
 public class LoginTests extends BaseTests {
 
-  @Test
+  @Test(description = "Verify successful login")
+  @Description("Test Description: Login test with valid username and password.")
+  @Story("Login Functionality")
   public void testSuccessfulLogin() {
     LoginPage loginPage = homePage.clickFormAuthentication();
     loginPage.setUsername("tomsmith");

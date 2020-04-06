@@ -1,7 +1,6 @@
 package base;
 
 import com.google.common.io.Files;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +10,8 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
-import utils.EventRecorder;
+import utils.EventListener;
+import utils.Reporter;
 import utils.VideoRecorder;
 
 import java.io.File;
@@ -20,15 +20,15 @@ import java.io.IOException;
 public class BaseTests {
 
   protected HomePage homePage;
-  private EventFiringWebDriver driver;
-  Logger log = Logger.getLogger("dev");
+  public EventFiringWebDriver driver;
 
   @BeforeMethod
   public void setUp() throws Exception {
+    Reporter.LogInfo("---- START OF TEST ----");
     VideoRecorder.startRecording();
     System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
     driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
-    driver.register(new EventRecorder());
+    driver.register(new EventListener());
 
     driver.get("https://the-internet.herokuapp.com/");
     homePage = new HomePage(driver);
@@ -39,6 +39,8 @@ public class BaseTests {
     recordFailure(result);
     driver.quit();
     VideoRecorder.stopRecording();
+    Reporter.LogInfo("---- FINISH OF TEST ----");
+
   }
 
   private ChromeOptions getChromeOptions() {
@@ -56,6 +58,7 @@ public class BaseTests {
       File screenshot = camera.getScreenshotAs(OutputType.FILE);
       try {
         Files.move(screenshot, new File("resources/screenshots/" + result.getName() + ".png"));
+        Reporter.LogInfo("Screenshot taken!");
       } catch (IOException e) {
         e.printStackTrace();
       }

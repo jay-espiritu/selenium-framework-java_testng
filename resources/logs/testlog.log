@@ -1,0 +1,17 @@
+2020-04-06 19:13:34 INFO  - ---- START OF TEST ----
+2020-04-06 19:13:46 INFO  - ---- FINISH OF TEST ----
+2020-04-06 19:17:51 INFO  - ---- START OF TEST ----
+2020-04-06 19:18:05 INFO  - ---- FINISH OF TEST ----
+2020-04-06 19:18:05 INFO  - ---- START OF TEST ----
+2020-04-06 19:18:12 INFO  - Clicked trigger alert button
+2020-04-06 19:18:12 INFO  - Accepted alert pop up
+2020-04-06 19:18:12 INFO  - ---- FINISH OF TEST ----
+2020-04-06 19:18:12 INFO  - ---- START OF TEST ----
+2020-04-06 19:18:20 INFO  - Confirmed trigger alert
+2020-04-06 19:18:20 INFO  - Dismissed alert pop up
+2020-04-06 19:18:21 INFO  - ---- FINISH OF TEST ----
+2020-04-06 19:18:21 INFO  - ---- START OF TEST ----
+2020-04-06 19:18:28 INFO  - Clicked trigger prompt button
+2020-04-06 19:18:28 INFO  - Entered text in alert text field
+2020-04-06 19:18:28 INFO  - Accepted alert pop up
+2020-04-06 19:18:29 INFO  - ---- FINISH OF TEST ----

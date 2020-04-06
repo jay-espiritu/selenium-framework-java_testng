@@ -1,6 +1,7 @@
 package pages;
 
 import base.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -18,10 +19,12 @@ public class LoginPage {
         basePage = new BasePage(driver);
     }
 
+    @Step("Entered username as '{0}'")
     public void setUsername(String username) {
         basePage.enterText(username, usernameField);
     }
 
+    @Step("Entered password as '{0}'")
     public void setPassword(String password) {
         basePage.enterText(password, passwordField);
     }

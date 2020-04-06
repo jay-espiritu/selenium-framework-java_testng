@@ -1,6 +1,7 @@
 package pages;
 
 import base.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.Reporter;
@@ -21,26 +22,31 @@ public class AlertsPage {
     basePage = new BasePage(driver);
   }
 
+  @Step("Clicked trigger alert button")
   public void triggerAlert() {
     basePage.clicked(triggerAlertButton);
     Reporter.LogInfo("Clicked trigger alert button");
   }
 
+  @Step("Confirmed trigger alert")
   public void triggerConfirm() {
     basePage.clicked(triggerConfirmButton);
     Reporter.LogInfo("Confirmed trigger alert");
   }
 
+  @Step("Clicked trigger prompt button")
   public void triggerPrompt() {
     basePage.clicked(triggerPromptButton);
     Reporter.LogInfo("Clicked trigger prompt button");
   }
 
+  @Step("Accepted alert pop up")
   public void alert_clickToAccept() {
     driver.switchTo().alert().accept();
     Reporter.LogInfo("Accepted alert pop up");
   }
 
+  @Step("Dismissed alert pop up")
   public void alert_clickToDismiss() {
     driver.switchTo().alert().dismiss();
     Reporter.LogInfo("Dismissed alert pop up");
