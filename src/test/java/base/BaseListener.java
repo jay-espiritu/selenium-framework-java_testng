@@ -13,7 +13,7 @@ public class BaseListener extends BaseTests implements ITestListener {
 
   @Override
   public void onTestStart(ITestResult iTestResult) {
-    Reporter.LogDebug("Starting test method: " + getTestMethodName(iTestResult));
+    Reporter.Log("Starting test method: " + getTestMethodName(iTestResult));
   }
 
   @Override
@@ -24,7 +24,7 @@ public class BaseListener extends BaseTests implements ITestListener {
 
   @Override
   public void onTestSkipped(ITestResult iTestResult) {
-    Reporter.LogDebug("Skipped test: " + getTestMethodName(iTestResult));
+    Reporter.Log("Skipped test: " + getTestMethodName(iTestResult));
   }
 
   @Override

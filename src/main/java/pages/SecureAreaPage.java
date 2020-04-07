@@ -3,6 +3,7 @@ package pages;
 import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.Reporter;
 
 public class SecureAreaPage {
 
@@ -16,6 +17,8 @@ public class SecureAreaPage {
     }
 
     public String getAlertText() {
-        return basePage.getElementText(statusAlert);
+        String text = basePage.getElementText(statusAlert);
+        Reporter.Log("Alert text: "+text);
+        return text;
     }
 }

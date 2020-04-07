@@ -51,7 +51,6 @@ public class EventListener implements WebDriverEventListener {
 
   @Override
   public void beforeClickOn(WebElement webElement, WebDriver webDriver) {
-    Reporter.LogDebug("Clicking on " + webElement.getText());
   }
 
   @Override

@@ -25,47 +25,47 @@ public class AlertsPage {
   @Step("Clicked trigger alert button")
   public void triggerAlert() {
     basePage.clicked(triggerAlertButton);
-    Reporter.LogInfo("Clicked trigger alert button");
+    Reporter.Log("Clicked trigger alert button");
   }
 
   @Step("Confirmed trigger alert")
   public void triggerConfirm() {
     basePage.clicked(triggerConfirmButton);
-    Reporter.LogInfo("Confirmed trigger alert");
+    Reporter.Log("Confirmed trigger alert");
   }
 
   @Step("Clicked trigger prompt button")
   public void triggerPrompt() {
     basePage.clicked(triggerPromptButton);
-    Reporter.LogInfo("Clicked trigger prompt button");
+    Reporter.Log("Clicked trigger prompt button");
   }
 
   @Step("Accepted alert pop up")
   public void alert_clickToAccept() {
     driver.switchTo().alert().accept();
-    Reporter.LogInfo("Accepted alert pop up");
+    Reporter.Log("Accepted alert pop up");
   }
 
   @Step("Dismissed alert pop up")
   public void alert_clickToDismiss() {
     driver.switchTo().alert().dismiss();
-    Reporter.LogInfo("Dismissed alert pop up");
+    Reporter.Log("Dismissed alert pop up");
   }
 
   public String alert_getText() {
     String alertText = driver.switchTo().alert().getText();
-    Reporter.LogDebug("Alert text: '" + alertText + "'");
+    Reporter.Log("Alert text: '" + alertText + "'");
     return alertText;
   }
 
   public void alert_setInput(String text) {
     driver.switchTo().alert().sendKeys(text);
-    Reporter.LogInfo("Entered text in alert text field");
+    Reporter.Log("Entered text in alert text field");
   }
 
   public String getResult() {
     String text = basePage.getElementText(results);
-    Reporter.LogDebug("Alert text: '" + text + "'");
+    Reporter.Log("Alert text: '" + text + "'");
     return text;
   }
 }

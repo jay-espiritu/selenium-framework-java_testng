@@ -3,6 +3,7 @@ package pages;
 import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.Reporter;
 
 public class HomePage {
 
@@ -23,10 +24,12 @@ public class HomePage {
 
   public AlertsPage clickJavaScriptAlerts(String alertText) {
     clickLink(alertText);
+    Reporter.Log("Clicked on JS alert");
     return new AlertsPage(driver);
   }
 
   private void clickLink(String linkText) {
     basePage.clicked(By.linkText(linkText));
+    Reporter.Log("Clicked on link" + linkText);
   }
 }

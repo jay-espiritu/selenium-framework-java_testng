@@ -24,7 +24,6 @@ public class BaseTests {
 
   @BeforeMethod
   public void setUp() throws Exception {
-    Reporter.LogInfo("---- START OF TEST ----");
     VideoRecorder.startRecording();
     System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
     driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
@@ -39,8 +38,6 @@ public class BaseTests {
     recordFailure(result);
     driver.quit();
     VideoRecorder.stopRecording();
-    Reporter.LogInfo("---- FINISH OF TEST ----");
-
   }
 
   private ChromeOptions getChromeOptions() {
@@ -58,7 +55,7 @@ public class BaseTests {
       File screenshot = camera.getScreenshotAs(OutputType.FILE);
       try {
         Files.move(screenshot, new File("resources/screenshots/" + result.getName() + ".png"));
-        Reporter.LogInfo("Screenshot taken!");
+        Reporter.Log("Screenshot taken!");
       } catch (IOException e) {
         e.printStackTrace();
       }

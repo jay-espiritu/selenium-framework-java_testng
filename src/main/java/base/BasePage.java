@@ -28,6 +28,7 @@ public class BasePage {
   }
 
   public void enterText(String inputText, By locator) {
+
     find(locator).sendKeys(inputText);
   }
 

@@ -101,12 +101,12 @@ public class VideoRecorder extends ScreenRecorder  {
             "");
 
     screenRecorder.start();
-    Reporter.LogDebug("Video recording started");
+    Reporter.Log("Video recording started");
   }
 
   public static void stopRecording() throws Exception {
     screenRecorder.stop();
-    Reporter.LogDebug("Video recording stopped");
+    Reporter.Log("Video recording stopped");
 
   }
 }
