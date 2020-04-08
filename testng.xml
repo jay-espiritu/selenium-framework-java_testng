@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="WebDriver Java Test" parallel="classes" group-by-instances="true" thread-count="2">
+<suite name="WebDriver Java Test" parallel="methods" group-by-instances="true" thread-count="5">
     <listeners>
         <listener class-name="base.BaseListener"/>
     </listeners>
 
     <test name="TestNG Sample Test">
         <classes>
-            <class name="login.LoginTests" />
-            <class name="alert.AlertTests" />
+            <class name="login.LoginTests"/>
+            <class name="alert.AlertTests"/>
         </classes>
     </test>
 

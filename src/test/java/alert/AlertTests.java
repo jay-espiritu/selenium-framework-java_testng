@@ -38,7 +38,7 @@ public class AlertTests extends BaseTests {
     AlertsPage alertsPage = homePage.clickJavaScriptAlerts("JavaScript Alerts");
     alertsPage.triggerPrompt();
 
-    String text = "TAU rocks!";
+    String text = "SCREAM!";
     alertsPage.alert_setInput(text);
     alertsPage.alert_clickToAccept();
     Assert.assertEquals(alertsPage.getResult(), "You entered: " + text, "Results text incorrect");
