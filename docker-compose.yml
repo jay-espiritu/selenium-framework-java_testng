@@ -1,19 +1,5 @@
-## You can generate a custom docker compose file automatically on http://reportportal.io/download (Step 2)
-
-## This is example of Docker Compose for ReportPortal
-## Do not forget to configure data volumes for production usage
-
-## Execute 'docker-compose -f docker-compose.yml -p reportportal up -d --force-recreate' --build
-## to start all containers in daemon mode
-## Where:
-##      '-f docker-compose.yml' -- specifies this compose file
-##      '-p reportportal' -- specifies container's prefix (project name)
-##      '-d' -- enables daemon mode
-##      '--force-recreate' -- forces re-recreating of all containers
-
 version: '2.4'
 services:
-
   gateway:
     image: traefik:1.7.12
     ports:
@@ -64,7 +50,6 @@ services:
       - elasticsearch
     restart: always
 
-  ### initial db schema for reportportal
   db-scripts:
     image: reportportal/migrations:5.0.0
     depends_on:
@@ -224,8 +209,32 @@ services:
       retries: 3
     restart: always
 
-  # Docker volume for Windows host
-#volumes:
-#  postgres:
+  selenium-hub:
+    image: selenium/hub
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"
 
-#DELETE CONTAINERS 'docker ps -a | grep "reportportal_" | awk '{print $1}' | xargs docker rm -f'
+  chrome:
+    image: selenium/node-chrome
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - NODE_MAX_INSTANCES=10
+      - NODE_MAX_SESSION=5
+
+  firefox:
+    image: selenium/node-firefox
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - NODE_MAX_INSTANCES=10
+      - NODE_MAX_SESSION=2
