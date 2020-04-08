@@ -34,7 +34,7 @@ public class BaseTests {
 
     /** Selenium Grid in docker execution */
     String nodeUrl = "http://localhost:4444/wd/hub";
-    DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 
     driver = new EventFiringWebDriver(new RemoteWebDriver(new URL(nodeUrl), capabilities));
     driver.get("https://the-internet.herokuapp.com/");
