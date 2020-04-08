@@ -140,3 +140,282 @@
 2020-04-07 19:00:29 INFO  - Accepted alert pop up
 2020-04-07 19:00:29 INFO  - Alert text: 'You entered: TAU rocks!'
 2020-04-07 19:00:30 INFO  - Video recording stopped
+2020-04-07 19:08:30 INFO  - Video recording started
+2020-04-07 19:08:40 INFO  - Starting test method: testSuccessfulLogin
+2020-04-07 19:08:41 INFO  - Entered username with tomsmith
+2020-04-07 19:08:42 INFO  - Entered password with SuperSecretPassword!
+2020-04-07 19:08:42 INFO  - Clicked on login button
+2020-04-07 19:08:42 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-07 19:08:42 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-07 19:08:43 INFO  - Video recording stopped
+2020-04-07 19:08:43 INFO  - Video recording started
+2020-04-07 19:08:49 INFO  - Starting test method: testUnsuccessfulLogin
+2020-04-07 19:08:51 INFO  - Entered username with tomsmith!
+2020-04-07 19:08:51 INFO  - Entered password with SuperSecretPassword!
+2020-04-07 19:08:52 INFO  - Clicked on login button
+2020-04-07 19:08:52 INFO  - Alert text: Your username is invalid!
+×
+2020-04-07 19:08:52 INFO  - Alert text: Your username is invalid!
+×
+2020-04-07 19:08:53 INFO  - Screenshot taken!
+2020-04-07 19:08:53 INFO  - Video recording stopped
+2020-04-07 19:08:53 INFO  - Video recording started
+2020-04-07 19:09:00 INFO  - Starting test method: testAcceptAlert
+2020-04-07 19:09:00 INFO  - Clicked on linkJavaScript Alerts
+2020-04-07 19:09:00 INFO  - Clicked on JS alert
+2020-04-07 19:09:01 INFO  - Clicked trigger alert button
+2020-04-07 19:09:01 INFO  - Accepted alert pop up
+2020-04-07 19:09:01 INFO  - Alert text: 'You successfuly clicked an alert'
+2020-04-07 19:09:01 INFO  - Video recording stopped
+2020-04-07 19:09:01 INFO  - Video recording started
+2020-04-07 19:09:08 INFO  - Starting test method: testGetTextFromAlert
+2020-04-07 19:09:09 INFO  - Clicked on linkJavaScript Alerts
+2020-04-07 19:09:09 INFO  - Clicked on JS alert
+2020-04-07 19:09:09 INFO  - Confirmed trigger alert
+2020-04-07 19:09:09 INFO  - Alert text: 'I am a JS Confirm'
+2020-04-07 19:09:09 INFO  - Dismissed alert pop up
+2020-04-07 19:09:09 INFO  - Video recording stopped
+2020-04-07 19:09:09 INFO  - Video recording started
+2020-04-07 19:09:17 INFO  - Starting test method: testSetInputInAlert
+2020-04-07 19:09:18 INFO  - Clicked on linkJavaScript Alerts
+2020-04-07 19:09:18 INFO  - Clicked on JS alert
+2020-04-07 19:09:18 INFO  - Clicked trigger prompt button
+2020-04-07 19:09:18 INFO  - Entered text in alert text field
+2020-04-07 19:09:18 INFO  - Accepted alert pop up
+2020-04-07 19:09:18 INFO  - Alert text: 'You entered: TAU rocks!'
+2020-04-07 19:09:19 INFO  - Video recording stopped
+2020-04-07 19:11:07 INFO  - Video recording started
+2020-04-07 19:11:18 INFO  - Entered username with tomsmith
+2020-04-07 19:11:19 INFO  - Entered password with SuperSecretPassword!
+2020-04-07 19:11:20 INFO  - Clicked on login button
+2020-04-07 19:11:20 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-07 19:11:20 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-07 19:11:20 INFO  - Video recording stopped
+2020-04-07 19:11:20 INFO  - Video recording started
+2020-04-07 19:11:29 INFO  - Entered username with tomsmith!
+2020-04-07 19:11:29 INFO  - Entered password with SuperSecretPassword!
+2020-04-07 19:11:30 INFO  - Clicked on login button
+2020-04-07 19:11:30 INFO  - Alert text: Your username is invalid!
+×
+2020-04-07 19:11:30 INFO  - Alert text: Your username is invalid!
+×
+2020-04-07 19:11:31 INFO  - Screenshot taken!
+2020-04-07 19:11:31 INFO  - Video recording stopped
+2020-04-08 18:53:16 INFO  - Video recording started
+2020-04-08 18:53:29 INFO  - Starting test method: testSuccessfulLogin
+2020-04-08 18:53:31 INFO  - Entered username with tomsmith
+2020-04-08 18:53:32 INFO  - Entered password with SuperSecretPassword!
+2020-04-08 18:53:33 INFO  - Clicked on login button
+2020-04-08 18:53:33 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-08 18:53:33 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-08 18:53:33 INFO  - Video recording stopped
+2020-04-08 18:53:33 INFO  - Video recording started
+2020-04-08 18:53:52 INFO  - Starting test method: testUnsuccessfulLogin
+2020-04-08 18:53:55 INFO  - Entered username with tomsmith!
+2020-04-08 18:53:55 INFO  - Entered password with SuperSecretPassword!
+2020-04-08 18:53:56 INFO  - Clicked on login button
+2020-04-08 18:53:56 INFO  - Alert text: Your username is invalid!
+×
+2020-04-08 18:53:56 INFO  - Alert text: Your username is invalid!
+×
+2020-04-08 18:53:58 INFO  - Screenshot taken!
+2020-04-08 18:53:59 INFO  - Video recording stopped
+2020-04-08 18:53:59 INFO  - Video recording started
+2020-04-08 18:54:08 INFO  - Starting test method: testAcceptAlert
+2020-04-08 18:54:09 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 18:54:09 INFO  - Clicked on JS alert
+2020-04-08 18:54:09 INFO  - Clicked trigger alert button
+2020-04-08 18:54:09 INFO  - Accepted alert pop up
+2020-04-08 18:54:09 INFO  - Alert text: 'You successfuly clicked an alert'
+2020-04-08 18:54:10 INFO  - Video recording stopped
+2020-04-08 18:54:10 INFO  - Video recording started
+2020-04-08 18:54:18 INFO  - Starting test method: testGetTextFromAlert
+2020-04-08 18:54:19 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 18:54:19 INFO  - Clicked on JS alert
+2020-04-08 18:54:19 INFO  - Confirmed trigger alert
+2020-04-08 18:54:19 INFO  - Alert text: 'I am a JS Confirm'
+2020-04-08 18:54:19 INFO  - Dismissed alert pop up
+2020-04-08 18:54:20 INFO  - Video recording stopped
+2020-04-08 18:54:20 INFO  - Video recording started
+2020-04-08 18:54:28 INFO  - Starting test method: testSetInputInAlert
+2020-04-08 18:54:29 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 18:54:29 INFO  - Clicked on JS alert
+2020-04-08 18:54:29 INFO  - Clicked trigger prompt button
+2020-04-08 18:54:29 INFO  - Entered text in alert text field
+2020-04-08 18:54:29 INFO  - Accepted alert pop up
+2020-04-08 18:54:29 INFO  - Alert text: 'You entered: TAU rocks!'
+2020-04-08 18:54:31 INFO  - Video recording stopped
+2020-04-08 18:58:09 INFO  - Video recording started
+2020-04-08 18:58:26 INFO  - Starting test method: testSuccessfulLogin
+2020-04-08 18:58:28 INFO  - Entered username with tomsmith
+2020-04-08 18:58:28 INFO  - Entered password with SuperSecretPassword!
+2020-04-08 18:58:30 INFO  - Clicked on login button
+2020-04-08 18:58:30 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-08 18:58:30 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-08 18:58:31 INFO  - Video recording stopped
+2020-04-08 18:58:31 INFO  - Video recording started
+2020-04-08 18:58:40 INFO  - Starting test method: testUnsuccessfulLogin
+2020-04-08 18:58:42 INFO  - Entered username with tomsmith!
+2020-04-08 18:58:43 INFO  - Entered password with SuperSecretPassword!
+2020-04-08 18:58:44 INFO  - Clicked on login button
+2020-04-08 18:58:44 INFO  - Alert text: Your username is invalid!
+×
+2020-04-08 18:58:44 INFO  - Alert text: Your username is invalid!
+×
+2020-04-08 18:58:45 INFO  - Screenshot taken!
+2020-04-08 18:58:45 INFO  - Video recording stopped
+2020-04-08 18:58:45 INFO  - Video recording started
+2020-04-08 18:58:58 INFO  - Starting test method: testAcceptAlert
+2020-04-08 18:58:59 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 18:58:59 INFO  - Clicked on JS alert
+2020-04-08 18:58:59 INFO  - Clicked trigger alert button
+2020-04-08 18:58:59 INFO  - Accepted alert pop up
+2020-04-08 18:58:59 INFO  - Alert text: 'You successfuly clicked an alert'
+2020-04-08 18:59:01 INFO  - Video recording stopped
+2020-04-08 18:59:01 INFO  - Video recording started
+2020-04-08 18:59:13 INFO  - Starting test method: testGetTextFromAlert
+2020-04-08 18:59:14 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 18:59:14 INFO  - Clicked on JS alert
+2020-04-08 18:59:14 INFO  - Confirmed trigger alert
+2020-04-08 18:59:14 INFO  - Alert text: 'I am a JS Confirm'
+2020-04-08 18:59:14 INFO  - Dismissed alert pop up
+2020-04-08 18:59:14 INFO  - Video recording stopped
+2020-04-08 18:59:14 INFO  - Video recording started
+2020-04-08 18:59:25 INFO  - Starting test method: testSetInputInAlert
+2020-04-08 18:59:25 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 18:59:25 INFO  - Clicked on JS alert
+2020-04-08 18:59:26 INFO  - Clicked trigger prompt button
+2020-04-08 18:59:26 INFO  - Entered text in alert text field
+2020-04-08 18:59:26 INFO  - Accepted alert pop up
+2020-04-08 18:59:26 INFO  - Alert text: 'You entered: TAU rocks!'
+2020-04-08 18:59:26 INFO  - Video recording stopped
+2020-04-08 19:34:40 INFO  - Video recording started
+2020-04-08 19:35:57 INFO  - Video recording started
+2020-04-08 19:36:19 INFO  - Video recording started
+2020-04-08 19:36:38 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 19:36:38 INFO  - Clicked on JS alert
+2020-04-08 19:36:38 INFO  - Clicked trigger prompt button
+2020-04-08 19:36:39 INFO  - Entered text in alert text field
+2020-04-08 19:36:39 INFO  - Accepted alert pop up
+2020-04-08 19:36:39 INFO  - Alert text: 'You entered: TAU rocks!'
+2020-04-08 19:36:39 INFO  - Video recording stopped
+2020-04-08 19:37:21 INFO  - Video recording started
+2020-04-08 19:37:38 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 19:37:38 INFO  - Clicked on JS alert
+2020-04-08 19:37:38 INFO  - Clicked trigger prompt button
+2020-04-08 19:37:38 INFO  - Entered text in alert text field
+2020-04-08 19:37:38 INFO  - Accepted alert pop up
+2020-04-08 19:37:38 INFO  - Alert text: 'You entered: TAU rocks!'
+2020-04-08 19:37:39 INFO  - Screenshot taken!
+2020-04-08 19:37:39 INFO  - Video recording stopped
+2020-04-08 19:44:40 INFO  - Video recording started
+2020-04-08 19:45:03 INFO  - Starting test method: testSuccessfulLogin
+2020-04-08 19:45:09 INFO  - Entered username with tomsmith
+2020-04-08 19:45:09 INFO  - Entered password with SuperSecretPassword!
+2020-04-08 19:45:11 INFO  - Clicked on login button
+2020-04-08 19:45:11 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-08 19:45:11 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-08 19:45:11 INFO  - Video recording stopped
+2020-04-08 19:45:11 INFO  - Video recording started
+2020-04-08 19:45:25 INFO  - Starting test method: testUnsuccessfulLogin
+2020-04-08 19:45:28 INFO  - Entered username with tomsmith!
+2020-04-08 19:45:29 INFO  - Entered password with SuperSecretPassword!
+2020-04-08 19:45:30 INFO  - Clicked on login button
+2020-04-08 19:45:30 INFO  - Alert text: Your username is invalid!
+×
+2020-04-08 19:45:30 INFO  - Alert text: Your username is invalid!
+×
+2020-04-08 19:45:31 INFO  - Screenshot taken!
+2020-04-08 19:45:31 INFO  - Video recording stopped
+2020-04-08 19:45:31 INFO  - Video recording started
+2020-04-08 19:45:57 INFO  - Starting test method: testAcceptAlert
+2020-04-08 19:45:58 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 19:45:58 INFO  - Clicked on JS alert
+2020-04-08 19:45:59 INFO  - Clicked trigger alert button
+2020-04-08 19:45:59 INFO  - Accepted alert pop up
+2020-04-08 19:45:59 INFO  - Alert text: 'You successfuly clicked an alert'
+2020-04-08 19:45:59 INFO  - Video recording stopped
+2020-04-08 19:45:59 INFO  - Video recording started
+2020-04-08 19:46:18 INFO  - Starting test method: testGetTextFromAlert
+2020-04-08 19:46:19 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 19:46:19 INFO  - Clicked on JS alert
+2020-04-08 19:46:20 INFO  - Confirmed trigger alert
+2020-04-08 19:46:20 INFO  - Alert text: 'I am a JS Confirm'
+2020-04-08 19:46:20 INFO  - Dismissed alert pop up
+2020-04-08 19:46:20 INFO  - Video recording stopped
+2020-04-08 19:46:20 INFO  - Video recording started
+2020-04-08 19:46:51 INFO  - Starting test method: testSetInputInAlert
+2020-04-08 19:46:51 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 19:46:51 INFO  - Clicked on JS alert
+2020-04-08 19:46:52 INFO  - Clicked trigger prompt button
+2020-04-08 19:46:52 INFO  - Entered text in alert text field
+2020-04-08 19:46:52 INFO  - Accepted alert pop up
+2020-04-08 19:46:52 INFO  - Alert text: 'You entered: SCREAM!'
+2020-04-08 19:46:52 INFO  - Video recording stopped
+2020-04-08 19:49:38 INFO  - Video recording started
+2020-04-08 19:51:00 INFO  - Video recording started
+2020-04-08 19:51:28 INFO  - Entered username with tomsmith!
+2020-04-08 19:51:28 INFO  - Entered password with SuperSecretPassword!
+2020-04-08 19:51:30 INFO  - Clicked on login button
+2020-04-08 19:51:30 INFO  - Alert text: Your username is invalid!
+×
+2020-04-08 19:51:30 INFO  - Alert text: Your username is invalid!
+×
+2020-04-08 19:51:31 INFO  - Screenshot taken!
+2020-04-08 19:51:31 INFO  - Video recording stopped
+2020-04-08 19:54:56 INFO  - Video recording started
+2020-04-08 19:54:56 INFO  - Video recording started
+2020-04-08 19:55:13 INFO  - Starting test method: testUnsuccessfulLogin
+2020-04-08 19:55:16 INFO  - Entered username with tomsmith!
+2020-04-08 19:55:17 INFO  - Entered password with SuperSecretPassword!
+2020-04-08 19:55:18 INFO  - Clicked on login button
+2020-04-08 19:55:18 INFO  - Alert text: Your username is invalid!
+×
+2020-04-08 19:55:18 INFO  - Alert text: Your username is invalid!
+×
+2020-04-08 19:55:19 INFO  - Screenshot taken!
+2020-04-08 19:55:19 INFO  - Video recording stopped
+2020-04-08 19:55:35 INFO  - Starting test method: testSuccessfulLogin
+2020-04-08 19:55:39 INFO  - Entered username with tomsmith
+2020-04-08 19:55:40 INFO  - Entered password with SuperSecretPassword!
+2020-04-08 19:55:42 INFO  - Clicked on login button
+2020-04-08 19:55:42 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-08 19:55:42 INFO  - Alert text: You logged into a secure area!
+×
+2020-04-08 19:55:43 INFO  - Video recording stopped
+2020-04-08 19:55:43 INFO  - Video recording started
+2020-04-08 19:55:43 INFO  - Video recording started
+2020-04-08 19:55:43 INFO  - Video recording started
+2020-04-08 19:55:56 INFO  - Starting test method: testGetTextFromAlert
+2020-04-08 19:55:57 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 19:55:57 INFO  - Clicked on JS alert
+2020-04-08 19:55:58 INFO  - Confirmed trigger alert
+2020-04-08 19:55:58 INFO  - Alert text: 'I am a JS Confirm'
+2020-04-08 19:55:58 INFO  - Dismissed alert pop up
+2020-04-08 19:55:59 INFO  - Video recording stopped
+2020-04-08 19:56:12 INFO  - Starting test method: testSetInputInAlert
+2020-04-08 19:56:14 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 19:56:14 INFO  - Clicked on JS alert
+2020-04-08 19:56:14 INFO  - Clicked trigger prompt button
+2020-04-08 19:56:14 INFO  - Entered text in alert text field
+2020-04-08 19:56:15 INFO  - Accepted alert pop up
+2020-04-08 19:56:15 INFO  - Alert text: 'You entered: SCREAM!'
+2020-04-08 19:56:15 INFO  - Video recording stopped
+2020-04-08 19:56:32 INFO  - Starting test method: testAcceptAlert
+2020-04-08 19:56:33 INFO  - Clicked on linkJavaScript Alerts
+2020-04-08 19:56:33 INFO  - Clicked on JS alert
+2020-04-08 19:56:34 INFO  - Clicked trigger alert button
+2020-04-08 19:56:34 INFO  - Accepted alert pop up
+2020-04-08 19:56:34 INFO  - Alert text: 'You successfuly clicked an alert'
+2020-04-08 19:56:34 INFO  - Video recording stopped

@@ -3,19 +3,20 @@ package base;
 import com.google.common.io.Files;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
-import utils.EventListener;
 import utils.Reporter;
 import utils.VideoRecorder;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 public class BaseTests {
 
@@ -25,10 +26,17 @@ public class BaseTests {
   @BeforeMethod
   public void setUp() throws Exception {
     VideoRecorder.startRecording();
-    System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
-    driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
-    driver.register(new EventListener());
 
+    /** Local machine execution */
+    //    System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+    //    driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
+    //    driver.register(new EventListener());
+
+    /** Selenium Grid in docker execution */
+    String nodeUrl = "http://localhost:4444/wd/hub";
+    DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+
+    driver = new EventFiringWebDriver(new RemoteWebDriver(new URL(nodeUrl), capabilities));
     driver.get("https://the-internet.herokuapp.com/");
     homePage = new HomePage(driver);
   }
@@ -45,7 +53,7 @@ public class BaseTests {
     options.addArguments("disable-infobars");
     options.addArguments("start-maximized");
     options.addArguments("disable-extensions");
-    options.setHeadless(true);
+    options.setHeadless(false);
     return options;
   }
 

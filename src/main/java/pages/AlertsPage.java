@@ -22,25 +22,21 @@ public class AlertsPage {
     basePage = new BasePage(driver);
   }
 
-  @Step("Clicked trigger alert button")
   public void triggerAlert() {
     basePage.clicked(triggerAlertButton);
     Reporter.Log("Clicked trigger alert button");
   }
 
-  @Step("Confirmed trigger alert")
   public void triggerConfirm() {
     basePage.clicked(triggerConfirmButton);
     Reporter.Log("Confirmed trigger alert");
   }
 
-  @Step("Clicked trigger prompt button")
   public void triggerPrompt() {
     basePage.clicked(triggerPromptButton);
     Reporter.Log("Clicked trigger prompt button");
   }
 
-  @Step("Accepted alert pop up")
   public void alert_clickToAccept() {
     driver.switchTo().alert().accept();
     Reporter.Log("Accepted alert pop up");
