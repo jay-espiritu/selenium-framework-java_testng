@@ -3,20 +3,19 @@ package base;
 import com.google.common.io.Files;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+import utils.EventListener;
 import utils.Reporter;
 import utils.VideoRecorder;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 public class BaseTests {
 
@@ -28,15 +27,16 @@ public class BaseTests {
     VideoRecorder.startRecording();
 
     /** Local machine execution */
-    //    System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
-    //    driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
-    //    driver.register(new EventListener());
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+        System.setProperty("webdriver.chrome.silentOutput", "true");
+        driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
+        driver.register(new EventListener());
 
     /** Selenium Grid in docker execution */
-    String nodeUrl = "http://localhost:4444/wd/hub";
-    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+//    String nodeUrl = "http://localhost:4444/wd/hub";
+//    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+//    driver = new EventFiringWebDriver(new RemoteWebDriver(new URL(nodeUrl), capabilities));
 
-    driver = new EventFiringWebDriver(new RemoteWebDriver(new URL(nodeUrl), capabilities));
     driver.get("https://the-internet.herokuapp.com/");
     homePage = new HomePage(driver);
   }
