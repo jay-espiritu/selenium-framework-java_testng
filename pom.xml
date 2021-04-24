@@ -11,7 +11,7 @@
     <properties>
         <maven.compiler.target>1.9</maven.compiler.target>
         <maven.compiler.source>1.9</maven.compiler.source>
-        <aspectj.version>1.8.10</aspectj.version>
+        <aspectj.version>1.9.6</aspectj.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
