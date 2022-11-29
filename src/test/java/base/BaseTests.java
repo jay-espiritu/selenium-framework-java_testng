@@ -1,6 +1,8 @@
 package base;
 
-import com.google.common.io.Files;
+import java.io.File;
+import java.io.IOException;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,13 +11,13 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import com.google.common.io.Files;
+
 import pages.HomePage;
 import utils.EventListener;
 import utils.Reporter;
 import utils.VideoRecorder;
-
-import java.io.File;
-import java.io.IOException;
 
 public class BaseTests {
 
@@ -27,15 +29,16 @@ public class BaseTests {
     VideoRecorder.startRecording();
 
     /** Local machine execution */
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
-        System.setProperty("webdriver.chrome.silentOutput", "true");
-        driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
-        driver.register(new EventListener());
+    System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+    System.setProperty("webdriver.chrome.silentOutput", "true");
+    driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
+    driver.register(new EventListener());
 
     /** Selenium Grid in docker execution */
-//    String nodeUrl = "http://localhost:4444/wd/hub";
-//    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-//    driver = new EventFiringWebDriver(new RemoteWebDriver(new URL(nodeUrl), capabilities));
+    // String nodeUrl = "http://localhost:4444/wd/hub";
+    // DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+    // driver = new EventFiringWebDriver(new RemoteWebDriver(new URL(nodeUrl),
+    // capabilities));
 
     driver.get("https://the-internet.herokuapp.com/");
     homePage = new HomePage(driver);
@@ -62,7 +65,7 @@ public class BaseTests {
       TakesScreenshot camera = (TakesScreenshot) driver;
       File screenshot = camera.getScreenshotAs(OutputType.FILE);
       try {
-        Files.move(screenshot, new File("resources/screenshots/" + result.getName() + ".png"));
+        Files.move(screenshot, new File("test-results/screenshots/" + result.getName() + ".png"));
         Reporter.Log("Screenshot taken!");
       } catch (IOException e) {
         e.printStackTrace();

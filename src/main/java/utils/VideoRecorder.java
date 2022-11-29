@@ -20,7 +20,7 @@ import static org.monte.media.AudioFormatKeys.MimeTypeKey;
 import static org.monte.media.VideoFormatKeys.MIME_AVI;
 import static org.monte.media.VideoFormatKeys.*;
 
-public class VideoRecorder extends ScreenRecorder  {
+public class VideoRecorder extends ScreenRecorder {
   public static ScreenRecorder screenRecorder;
   public String name;
 
@@ -56,7 +56,7 @@ public class VideoRecorder extends ScreenRecorder  {
   }
 
   public static void startRecording() throws Exception {
-    File file = new File("resources/videos/");
+    File file = new File("test-results/videos/");
 
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     int width = screenSize.width;
@@ -64,41 +64,39 @@ public class VideoRecorder extends ScreenRecorder  {
 
     Rectangle captureSize = new Rectangle(0, 0, width, height);
 
-    GraphicsConfiguration gc =
-        GraphicsEnvironment.getLocalGraphicsEnvironment()
-            .getDefaultScreenDevice()
-            .getDefaultConfiguration();
+    GraphicsConfiguration gc = GraphicsEnvironment.getLocalGraphicsEnvironment()
+        .getDefaultScreenDevice()
+        .getDefaultConfiguration();
 
-    screenRecorder =
-        new VideoRecorder(
-            gc,
-            captureSize,
-            new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
-            new Format(
-                MediaTypeKey,
-                MediaType.VIDEO,
-                EncodingKey,
-                ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-                CompressorNameKey,
-                ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-                DepthKey,
-                24,
-                FrameRateKey,
-                Rational.valueOf(15),
-                QualityKey,
-                1.0f,
-                KeyFrameIntervalKey,
-                15 * 60),
-            new Format(
-                MediaTypeKey,
-                MediaType.VIDEO,
-                EncodingKey,
-                "black",
-                FrameRateKey,
-                Rational.valueOf(30)),
-            null,
-            file,
-            "");
+    screenRecorder = new VideoRecorder(
+        gc,
+        captureSize,
+        new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
+        new Format(
+            MediaTypeKey,
+            MediaType.VIDEO,
+            EncodingKey,
+            ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+            CompressorNameKey,
+            ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+            DepthKey,
+            24,
+            FrameRateKey,
+            Rational.valueOf(15),
+            QualityKey,
+            1.0f,
+            KeyFrameIntervalKey,
+            15 * 60),
+        new Format(
+            MediaTypeKey,
+            MediaType.VIDEO,
+            EncodingKey,
+            "black",
+            FrameRateKey,
+            Rational.valueOf(30)),
+        null,
+        file,
+        "");
 
     screenRecorder.start();
     Reporter.Log("Video recording started");

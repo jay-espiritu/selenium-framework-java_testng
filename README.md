@@ -10,5 +10,5 @@ Test Website: https://the-internet.herokuapp.com/
 1. Execute `allure serve allure-results`
 
 #### Failed tests artifacts
-1. Failed test video recordings are stored in `src/resources/videos`
-2. Screenshots are taken on every failed tests which can be located in `src/resources/screenshots`
+1. Failed test video recordings are stored in `src/test-results/videos`
+2. Screenshots are taken on every failed tests which can be located in `src/test-results/screenshots`
