@@ -1,4 +1,7 @@
 .idea
+.vscode
+
+# Test results
 target
 allure-results
 test-results
